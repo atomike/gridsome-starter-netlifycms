@@ -20,6 +20,7 @@ collections:
       - { label: "slug", name: "slug", widget: "string" }
       - { label: "body", name: "body", widget: "markdown" }
       - { label: "image", name: "image", widget: "image"}
+      - { label: "author", name: "author", widget: "string"}
 
   - name: "data"
     label: "Data"

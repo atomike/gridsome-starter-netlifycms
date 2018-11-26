@@ -4,7 +4,8 @@
     <div class="article">
       <div class="meta">
         <h1>{{ $page.blogPost.title }}</h1>
-        <span>{{ $page.blogPost.date }}</span>
+        <span>{{ $page.blogPost.date }}</span><br />
+        <g-image :src="$page.blogPost.image.src" width="700" />
       </div>
       <div class="article__content" v-html="$page.blogPost.content" />
     </div>
@@ -35,6 +36,7 @@
       title
       date (format: "DD MMMM YYYY")
       content
+      image
     }
   }
 </page-query>
@@ -49,6 +51,9 @@
       span
         font-size: 14px
         color: darken(#cdcdcd, 15%)
+
+      img
+        max-width: 100%
 
   .article__content
     max-width: 700px
